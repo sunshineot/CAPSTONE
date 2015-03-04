@@ -1,0 +1,108 @@
+body {
+	font: 14px/21px "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+	background-color: #F7E7CE;
+}
+
+.chooseyear h2, .years {
+	font-family:Georgia, Times, "Times New Roman", serif;
+}
+
+.chooseyear ul {
+    width:450px;
+    list-style-type:none;
+    list-style-position:outside;
+    margin:0px;
+    padding:0px;
+}
+
+.chooseyear li{
+    padding:12px; 
+    border-bottom:1px solid #eee;
+    position:relative;
+}
+
+.chooseyear li:first-child, .chooseyear li:last-child {
+    border-bottom:1px solid #777;
+}
+
+.chooseyear h1{
+	position: center;
+    display: inline;
+}
+
+div.chooseyear {
+	position: fixed;
+	right: 30%;
+	top: 20%;
+	width: 450px;
+    background-color: #C23B22;
+    background: -webkit-gradient(linear, left top, left bottom, from(#C23B22), to(#E9967A));
+    background: -webkit-linear-gradient(top, #C23B22, #E9967A);
+    background: -moz-linear-gradient(top, #C23B22, #E9967A);
+    background: -ms-linear-gradient(top, #C23B22, #E9967A);
+    background: -o-linear-gradient(top, #C23B22, #E9967A);
+    background: linear-gradient(top, #C23B22, #E9967A);
+    border: 1px solid #509111;
+    border-bottom: 1px solid #5b992b;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    box-shadow: inset 0 1px 0 0 #9fd574;
+    -webkit-box-shadow: 0 1px 0 0 #9fd574 inset ;
+    -moz-box-shadow: 0 1px 0 0 #9fd574 inset;
+    -ms-box-shadow: 0 1px 0 0 #9fd574 inset;
+    -o-box-shadow: 0 1px 0 0 #9fd574 inset;
+    color: white;
+    font-weight: bold;
+    padding: 6px 20px;
+    text-align: center;
+    text-shadow: 0 -1px 0 #396715;
+}
+
+#years{
+	float: right;
+	padding: 30px 0 0 30px;
+}
+
+#years li{
+	float: left;
+	margin: -30px 0 0 5px;
+	border-bottom:none;
+}
+
+div.year1, div.year2, div.year3, div.year4{
+    background-color: #7E5E60;
+    border-radius: 260px;
+    -webkit-border-radius: 260px;
+    -moz-border-radius: 260px;
+    -ms-border-radius: 260px;
+    -o-border-radius: 260px;
+    color: white;
+    font-weight: bold;
+	font-family: sans-serif;
+	font: 24px;
+    padding: 6px 20px;
+    text-align: center;
+	vertical-align: center;
+    /* text-shadow: 0 -1px 0 #396715; */
+	margin-bottom: 10px;
+	margin-top: 5px;
+	width: 40px;
+	height: 70px;
+}
+
+div.year1:hover, div.year2:hover, div.year3:hover, div.year4:hover{
+    opacity:.85;
+    cursor: pointer;
+}
+
+div.year1:active, div.year2:active, div.year3:active, div.year4:active {
+    border: 1px solid #20911e;
+    box-shadow: 0 0 10px 5px #20911e inset; 
+    -webkit-box-shadow:0 0 10px 5px #20911e inset ;
+    -moz-box-shadow: 0 0 10px 5px #20911e inset;
+    -ms-box-shadow: 0 0 10px 5px #20911e inset;
+    -o-box-shadow: 0 0 10px 5px #20911e inset;
+}
