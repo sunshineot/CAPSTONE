@@ -45,15 +45,17 @@ create table prereq
 );
 
 
-create table degree	/*Need to find a away to account for majors and minors */
+create table degrees	/*Need to find a away to account for majors and minors */
 	(
 		id int auto_increment NOT NULL,
 		name varchar(50),
 		department varchar(50),
+		type varchar(50),
 
 		primary key (id)
 
 	);
+
 
 
 create table lecturer
