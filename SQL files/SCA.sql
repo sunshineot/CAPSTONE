@@ -3,22 +3,30 @@ DROP DATABASE IF EXISTS capstone;
 CREATE DATABASE capstone;
 USE capstone;
 
-CREATE TABLE student
+CREATE TABLE studentpersonal 
 (	
 	stid int,
 	fname varchar(25),
 	lname varchar(25),
-	major1 varchar(25),
-	major2 varchar(25),
-	minor1 varchar(25),
-	minor2 varchar(25),
-	level int,
-	status varchar(10),
 	password varchar(25),
+	email varchar(50),
 
 	primary key (stid)
 
 );
+
+create table student
+	(
+		stid int,
+		major1 varchar(25),
+		major2 varchar(25),
+		minor1 varchar(25),
+		minor2 varchar(25),
+		level int,
+		status varchar(10),
+		primary key (stid),
+		FOREIGN KEY (stid) REFERENCES studentpersonal(stid)
+	);
 
 create table courses
 	(
@@ -55,6 +63,16 @@ create table degrees	/*Need to find a away to account for majors and minors */
 		primary key (id)
 
 	);
+
+	create table requirements
+		(
+			id int not null AUTO_INCREMENT,
+			degree_name varchar(50),
+			core_course varchar(25),
+			primary key (id),
+			FOREIGN KEY (core_course) REFERENCES courses(c_code)
+			/*FOREIGN KEY (name) REFERENCES courses(c_code)*/
+		);
 
 
 
