@@ -86,46 +86,28 @@
         </div>
         <div class="panel-body">
           
+          <?php
+			mysql_connect("localhost", "root", "")or die("Cannot connect server"); 
+			mysql_select_db("capstone")or die("Cannot select the desired database");
+			$query1="SELECT id, name FROM degrees WHERE type='MAJOR' ORDER BY name";
+			$query2="SELECT id, name FROM degrees WHERE type='MINOR' ORDER BY name";
+			$result1=mysql_query($query1) or die ("Couldn't execute query.");
+			$result2=mysql_query($query2) or die ("Couldn't execute query.");
+		?>
+          
           <form class="form form-vertical">
             <div class="control-group">
               <label>1st Major:</label>
               <div class="controls">
 				<select class="form-control" name = "major1" required autofocus>
-						<option slected> --- </option>
-						<option>BIOCHEMISTRY</option>
-						<option>BIOTECHNOLOGY</option>
-						<option>MICROBIOLOGY</option>
-						<option>MOLECULAR BIOLOGY</option>
-						<option>APPLIED CHEMISTRY</option>
-						<option>GENERAL CHEMISTRY</option>
-						<option>ENVIRONMENTAL CHEMISTRY</option>
-						<option>FOOD CHEMISTRY</option>
-						<option>COMPUTER SCIENCE</option>
-						<option>SOFTWARE ENGINEERING</option>
-						<option>COMPUTER STUDIES (SPECIAL)</option>
-						<option>COMPUTER SYSTEMS ENGINEERING (SPECIAL)</option>
-						<option>INFORMATION TECHNOLOGY (SPECIAL)</option>
-						<option>GEOGRAPHY</option>
-						<option>GEOLOGY</option>
-						<option>ELECTRONICS</option>
-						<option>ENERGY AND ENVIRONMENTAL PHYSICS</option>
-						<option>GENERAL PHYSICS</option>
-						<option>MATERIALS SCIENCE</option>
-						<option>MEDICAL PHYSICS</option>
-						<option>PHYSICS WITH EDUCATION (SPECIAL)</option>
-						<option>MATHEMATICS</option>
-						<option>MATHEMATICS AND MODELLING PROCESSES(DOUBLE)</option>
-						<option>ACTUARIAL SCIENCE (SPECIAL)</option>
-						<option>MATHEMATICS WITH EDUCATION (SPECIAL)</option>
-						<option>ANIMAL BIOLOGY</option>
-						<option>PLANT BIOLOGY</option>
-						<option>HORTICULTURE</option>
-						<option>MARINE BIOLOGY</option>
-						<option>TERRESTRIAL AND FRESHWATER ECOLOGY</option>
-						<option>BIOLOGY WITH EDUCATION (SPECIAL)</option>
-						<option>ENVIRONMENTAL BIOLOGY (SPECIAL)</option>
-						<option>EXPERIMENTAL BIOLOGY (SPECIAL)</option>
-					</select></br>
+						<option selected> --Select Major-- </option>
+						<?php
+							while($row=mysql_fetch_array($result1))
+							{?> 
+								<option value="<?php echo $row['id'];?>"> <?php echo $row['name'];?> </option>
+							<?php} 
+						?>
+				</select></br>
               </div>
             </div> 
 			
@@ -133,40 +115,13 @@
               <label>2nd Major:</label>
               <div class="controls">
 				<select class="form-control" name = "major2">
-						<option slected> --- </option>
-						<option>BIOCHEMISTRY</option>
-						<option>BIOTECHNOLOGY</option>
-						<option>MICROBIOLOGY</option>
-						<option>MOLECULAR BIOLOGY</option>
-						<option>APPLIED CHEMISTRY</option>
-						<option>GENERAL CHEMISTRY</option>
-						<option>ENVIRONMENTAL CHEMISTRY</option>
-						<option>FOOD CHEMISTRY</option>
-						<option>COMPUTER SCIENCE</option>
-						<option>SOFTWARE ENGINEERING</option>
-						<option>COMPUTER STUDIES (SPECIAL)</option>
-						<option>COMPUTER SYSTEMS ENGINEERING (SPECIAL)</option>
-						<option>INFORMATION TECHNOLOGY (SPECIAL)</option>
-						<option>GEOGRAPHY</option>
-						<option>GEOLOGY</option>
-						<option>ELECTRONICS</option>
-						<option>ENERGY AND ENVIRONMENTAL PHYSICS</option>
-						<option>GENERAL PHYSICS</option>
-						<option>MATERIALS SCIENCE</option>
-						<option>MEDICAL PHYSICS</option>
-						<option>PHYSICS WITH EDUCATION (SPECIAL)</option>
-						<option>MATHEMATICS</option>
-						<option>MATHEMATICS AND MODELLING PROCESSES(DOUBLE)</option>
-						<option>ACTUARIAL SCIENCE (SPECIAL)</option>
-						<option>MATHEMATICS WITH EDUCATION (SPECIAL)</option>
-						<option>ANIMAL BIOLOGY</option>
-						<option>PLANT BIOLOGY</option>
-						<option>HORTICULTURE</option>
-						<option>MARINE BIOLOGY</option>
-						<option>TERRESTRIAL AND FRESHWATER ECOLOGY</option>
-						<option>BIOLOGY WITH EDUCATION (SPECIAL)</option>
-						<option>ENVIRONMENTAL BIOLOGY (SPECIAL)</option>
-						<option>EXPERIMENTAL BIOLOGY (SPECIAL)</option>
+						<option selected> --Select Major-- </option>
+						<?php
+							while($row=mysql_fetch_array($result1))
+							{?> 
+								<option value="<?php echo $row['id'];?>"> <?php echo $row['name'];?> </option>
+							<?php} 
+						?>
 					</select></br>
                 
               </div>
@@ -175,24 +130,13 @@
               <label>1st Minor:</label>
               <div class="controls">
 				<select class="form-control" name = "minor1">
-						<option slected> --- </option>
-						<option>ENVIRONMENTAL CHEMISTRY</option>
-						<option>FOOD CHEMISTRY</option>
-						<option>FOOD PROCESSING</option>
-						<option>GENERAL CHEMISTRY</option>
-						<option>INDUSTRIAL CHEMISTRY</option>				
-						<option>GEOGRAPHY</option>
-						<option>GEOLOGY</option>
-						<option>ELECTRONICS</option>
-						<option>ENERGY AND ENVIRONMENTAL PHYSICS</option>
-						<option>GENERAL PHYSICS</option>
-						<option>MATERIALS SCIENCE</option>
-						<option>MEDICAL PHYSICS</option>
-						<option>MATHEMATICS</option>
-						<option>ANIMAL BIOLOGY</option>
-						<option>PLANT BIOLOGY</option>
-						<option>COASTAL ECOSYSTEMS</option>
-						<option>TERRESTRIAL AND FRESHWATER ECOLOGY</option>
+						<option selected> --Select Minor-- </option>
+						<?php
+							while($row=mysql_fetch_array($result1))
+							{?> 
+								<option value="<?php echo $row['id'];?>"> <?php echo $row['name'];?> </option>
+							<?php} 
+						?>
 					</select></br>
               </div>
             </div> 
@@ -201,24 +145,13 @@
               	<label>2nd Minor:</label>
               <div class="controls">
 				<select class="form-control" name = "minor2">
-						<option slected> --- </option>
-						<option>ENVIRONMENTAL CHEMISTRY</option>
-						<option>FOOD CHEMISTRY</option>
-						<option>FOOD PROCESSING</option>
-						<option>GENERAL CHEMISTRY</option>
-						<option>INDUSTRIAL CHEMISTRY</option>				
-						<option>GEOGRAPHY</option>
-						<option>GEOLOGY</option>
-						<option>ELECTRONICS</option>
-						<option>ENERGY AND ENVIRONMENTAL PHYSICS</option>
-						<option>GENERAL PHYSICS</option>
-						<option>MATERIALS SCIENCE</option>
-						<option>MEDICAL PHYSICS</option>
-						<option>MATHEMATICS</option>
-						<option>ANIMAL BIOLOGY</option>
-						<option>PLANT BIOLOGY</option>
-						<option>COASTAL ECOSYSTEMS</option>
-						<option>TERRESTRIAL AND FRESHWATER ECOLOGY</option>
+						<option selected> --Select Minor-- </option>
+						<?php
+							while($row=mysql_fetch_array($result1))
+							{?> 
+								<option value="<?php echo $row['id'];?>"> <?php echo $row['name'];?> </option>
+							<?php} 
+						?>
 					</select></br>
               </div>
             </div>    
