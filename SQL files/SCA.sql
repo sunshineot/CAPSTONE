@@ -88,6 +88,15 @@ create table lecturer
 	);
 
 
+create table cxc
+	(
+		id int not null AUTO_INCREMENT,
+		cxc_name not null varchar(50),
+		type not null varchar(25),
+		primary key(id)
+	);
+
+
 
 
 
