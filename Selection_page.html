@@ -102,7 +102,7 @@
 				<select class="form-control" name = "major1" required autofocus>
 						<option selected> --Select Major-- </option>
 						<?php
-							while($row=mysql_fetch_array($result1))
+							while($row=mysql_fetch_assoc($result1))
 							{?> 
 								<option value="<?php echo $row['id'];?>"> <?php echo $row['name'];?> </option>
 							<?php} 
@@ -117,7 +117,7 @@
 				<select class="form-control" name = "major2">
 						<option selected> --Select Major-- </option>
 						<?php
-							while($row=mysql_fetch_array($result1))
+							while($row=mysql_fetch_assoc($result1))
 							{?> 
 								<option value="<?php echo $row['id'];?>"> <?php echo $row['name'];?> </option>
 							<?php} 
@@ -132,7 +132,7 @@
 				<select class="form-control" name = "minor1">
 						<option selected> --Select Minor-- </option>
 						<?php
-							while($row=mysql_fetch_array($result1))
+							while($row=mysql_fetch_assoc($result1))
 							{?> 
 								<option value="<?php echo $row['id'];?>"> <?php echo $row['name'];?> </option>
 							<?php} 
@@ -147,7 +147,7 @@
 				<select class="form-control" name = "minor2">
 						<option selected> --Select Minor-- </option>
 						<?php
-							while($row=mysql_fetch_array($result1))
+							while($row=mysql_fetch_assoc($result1))
 							{?> 
 								<option value="<?php echo $row['id'];?>"> <?php echo $row['name'];?> </option>
 							<?php} 
