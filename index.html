@@ -16,10 +16,11 @@
 
     <!-- Custom styles for this template -->
     <link href="css/cover.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="./Cover Template for Bootstrap_files/ie-emulation-modes-warning.js"></script>
+    <script src="js/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -41,9 +42,23 @@
               <h3 class="masthead-brand">Student Course Adviser</h3>
               <nav>
                 <ul class="nav masthead-nav">
-                  <li class="active"><a href="./Cover Template for Bootstrap_files/Cover Template for Bootstrap.html">Log In</a></li>
-                  <li><a href="./Cover Template for Bootstrap_files/Cover Template for Bootstrap.html">About</a></li>
-                  <li><a href="./Cover Template for Bootstrap_files/Cover Template for Bootstrap.html">FAQ's</a></li>
+                  <li class="dropdown">
+		          <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="">
+		            <i class="glyphicon glyphicon-user"></i> Login <span class="caret"></span></a>
+		          <ul id="g-account-menu" class="dropdown-menu" role="menu">
+		            <form class="navbar-form navbar-left" method="post" action="dashboard.html">
+                              <div class="form-group">
+                                <input type="text" class="form-control" name ="username" placeholder="Username">
+                                <input type="password" class="form-control" name="password" placeholder="Password">
+                              </div>
+                              <button type="submit" class="btn btn-default">Log in</button>
+                     </form>
+
+		          </ul>
+		        </li>
+                  <!--  <li class="active"><a href="./Cover Template for Bootstrap_files/Cover Template for Bootstrap.html">Log In</a></li> -->
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="faq.html">FAQ's</a></li>
                 </ul>
               </nav>
             </div>
@@ -51,9 +66,9 @@
 
           <div class="inner cover">
             <h1 class="cover-heading">UWI MONA Student Course Adviser</h1>
-            <p class="lead">We plan your degree so you dont have to!</p>
+            <p class="lead">We plan your degree so you don't have to!</p>
             <p class="lead">
-              <a href="signup.html" class="btn btn-lg btn-default">Signup</a>
+              <a href="signup.html" class="btn btn-lg btn-default">Sign up</a>
             </p>
           </div>
 
@@ -70,10 +85,11 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./Cover Template for Bootstrap_files/jquery.min.js"></script>
-    <script src="./Cover Template for Bootstrap_files/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="./Cover Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
-  
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    
 
 </body></html>

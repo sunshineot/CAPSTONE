@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<title>Prgramme Choice</title>
+		<title>Program Choice</title>
 		<meta name="generator" content="Bootply" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
@@ -59,8 +59,8 @@
       <hr>
       
       <ul class="nav nav-stacked">
-        <li><a href="javascript:;"><i class="glyphicon glyphicon-flash"></i> Before You Plan</a></li>
-        <li><a href="javascript:;"><i class="glyphicon glyphicon-flash"></i> Choose Your Major/Minor</a></li>
+        <li><a href="highschool.html"><i class="glyphicon glyphicon-flash"></i> Before You Plan</a></li>
+        <li><a href="majors.html"><i class="glyphicon glyphicon-flash"></i> Choose Your Major/Minor</a></li>
         <li><a href="javascript:;"><i class="glyphicon glyphicon-link"></i> Year 1</a></li>
         <li><a href="javascript:;"><i class="glyphicon glyphicon-list-alt"></i> Year 2</a></li>
         <li><a href="javascript:;"><i class="glyphicon glyphicon-book"></i> Year 3</a></li>
@@ -102,7 +102,7 @@
 				<select class="form-control" name = "major1" required autofocus>
 						<option selected> --Select Major-- </option>
 						<?php
-							while($row=mysql_fetch_assoc($result1))
+							while($row=mysql_fetch_array($result1))
 							{?> 
 								<option value="<?php echo $row['id'];?>"> <?php echo $row['name'];?> </option>
 							<?php} 
@@ -117,7 +117,7 @@
 				<select class="form-control" name = "major2">
 						<option selected> --Select Major-- </option>
 						<?php
-							while($row=mysql_fetch_assoc($result1))
+							while($row=mysql_fetch_array($result1))
 							{?> 
 								<option value="<?php echo $row['id'];?>"> <?php echo $row['name'];?> </option>
 							<?php} 
@@ -132,7 +132,7 @@
 				<select class="form-control" name = "minor1">
 						<option selected> --Select Minor-- </option>
 						<?php
-							while($row=mysql_fetch_assoc($result1))
+							while($row=mysql_fetch_array($result1))
 							{?> 
 								<option value="<?php echo $row['id'];?>"> <?php echo $row['name'];?> </option>
 							<?php} 
@@ -147,7 +147,7 @@
 				<select class="form-control" name = "minor2">
 						<option selected> --Select Minor-- </option>
 						<?php
-							while($row=mysql_fetch_assoc($result1))
+							while($row=mysql_fetch_array($result1))
 							{?> 
 								<option value="<?php echo $row['id'];?>"> <?php echo $row['name'];?> </option>
 							<?php} 
@@ -166,18 +166,7 @@
 		
          
             <!--center-right-->
-        	<div class="col-md-5">
-              
-                <ul class="nav nav-justified">
-         			<li><a href="#"><i class="glyphicon glyphicon-cog"></i></a></li>
-                    <li><a href="#"><i class="glyphicon glyphicon-heart"></i></a></li>
-         			<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="glyphicon glyphicon-comment"></i><span class="count">3</span></a><ul class="dropdown-menu" role="menu"><li><a href="#">1. Is there a way..</a></li><li><a href="#">2. Hello, admin. I would..</a></li><li><a href="#"><strong>All messages</strong></a></li></ul></li>
-         			<li><a href="#"><i class="glyphicon glyphicon-user"></i></a></li>
-         			<li><a title="Add Widget" data-toggle="modal" href="#addWidgetModal"><span class="glyphicon glyphicon-plus-sign"></span></a></li>
-       			</ul>  
-              
-            
-                
+        	
 			</div><!--/col-span-6-->
      
        </div><!--/row-->
@@ -188,24 +177,7 @@
   
   <!-- lower section -->
   
-    <div class="col-md-4">
-      
-      <ul class="nav nav-pills nav-stacked">
-        <li class="nav-header"></li>
-        <li><a href="#"><i class="glyphicon glyphicon-list"></i> Layouts &amp; Templates</a></li>
-        <li class="divider"></li>
-        <li><a href="#"><i class="glyphicon glyphicon-briefcase"></i> Toolbox</a></li>
-        <li><a href="#"><i class="glyphicon glyphicon-link"></i> Widgets</a></li>
-        <li><a href="#"><i class="glyphicon glyphicon-list-alt"></i> Reports</a></li>
-        <li><a href="#"><i class="glyphicon glyphicon-book"></i> Pages</a></li>
-        <li class="divider"></li>
-        <li><a href="#"><i class="glyphicon glyphicon-star"></i> Social Media</a></li>
-      </ul>
-      
-      <hr>
-          
-          
-        </div><!--/panel content-->
+    
       </div><!--/panel-->
       
       
