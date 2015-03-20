@@ -6,14 +6,16 @@
 
 body {
     padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    background: url('http://www.ccsf.edu/content/ccsf/en/student-services/admissions-and-registration/records/evaluation-and-graduation/_jcr_content/subheader-image/smallimage2.img.jpg/1370738959078.jpg') center center no-repeat scroll;
+
 }
 
 /* Header Image Background - Change the URL below to your image path (example: ../images/background.jpg) */
 
 .business-header {
     height: 400px;
-    /*background: url('https://farm5.staticflickr.com/4053/4324535515_5fcb04ae1d.jpg') center center no-repeat scroll;*/
-    background: url('http://www.uwimonanow.com/UWI/graduation/gallery/images/20121105155707_dsc_0626.jpg') center center no-repeat scroll;
+    background: url('http://www.ccsf.edu/content/ccsf/en/student-services/admissions-and-registration/records/evaluation-and-graduation/_jcr_content/subheader-image/smallimage2.img.jpg/1370738959078.jpg') center center no-repeat scroll;
+
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
