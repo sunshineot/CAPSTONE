@@ -90,7 +90,7 @@
         </div>
         <div class="panel-body">
       
-		<form class="form form-vertical">
+		<form class="form form-vertical" method="post" action="degree.php">
 			<div class="control-group">
 				<label>1st Major:</label>
 				<div class="controls">
@@ -158,7 +158,7 @@
 			<div class="control-group" style="float: right">
               <label></label>
               <div class="controls">
-                <button type="submit" class="btn btn-primary" action="degree.php">Plan My Degree</button>
+                <button type="submit" class="btn btn-primary">Plan My Degree</button>
               </div>
             </div>
 		</form>
