@@ -16,6 +16,31 @@
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<link href="css/styles.css" rel="stylesheet">
+<<<<<<< HEAD
+		<script type="text/javascript">
+		function validate_form(thisForm){
+			//we need to include a function that checks that all the if's are true.
+			if (thisForm["major1"].value== "--Select Major--" && thisForm["major2"].value != "--Select Major--"){
+				alert("Major 1 must be selected before you can select Major 2");
+				return false;
+			}
+			if (thisForm["minor1"].value== "--Select Minor--" && thisForm["minor2"].value != "--Select Minor--"){
+				alert("Minor 1 must be selected before you can select Minor 2");
+				return false;
+			}
+			if ((thisForm["major1"].value != "--Submit Major--")&&(thisForm["major2"].value != "--Submit Major--") && (thisForm["major1"].value == thisForm["major2"].value)){
+				alert("You cannot do the two same Majors");
+				return false;
+			}
+			// if(thisForm["special"].value != '--Select Special--' ) &&(((thisForm["major1"].value != '--Select Major--' ) or (thisForm["major2"].value != '--Select Major--' ))){
+				 // alert("You cannot do a Major and a Special");
+				 // return false;
+			//}
+		}
+
+		</script>
+=======
+>>>>>>> origin/master
 	</head>
 	<body>
 <!-- Header -->
@@ -90,7 +115,11 @@
         </div>
         <div class="panel-body">
       
+<<<<<<< HEAD
+		<form class="form form-vertical" method="post" onsubmit="return validate_form(this)" action="degree.php">
+=======
 		<form class="form form-vertical" method="post" action="degree.php">
+>>>>>>> origin/master
 			<div class="control-group">
 				<label>1st Major:</label>
 				<div class="controls">
@@ -112,6 +141,19 @@
 			</div>
 			
 			<div class="control-group">
+<<<<<<< HEAD
+				<label>Programs/Special:</label>
+				<div class="controls">
+					<select class="form-control" name="special" required autofocus>
+					<option selected>--Select Special--</option>
+						<?php query_special()?>
+					</select></br>
+				</div>
+			</div>
+			
+			<div class="control-group">
+=======
+>>>>>>> origin/master
 				<label>1st Minor:</label>
 				<div class="controls">
 					<select class="form-control" name="minor1">

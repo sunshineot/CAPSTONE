@@ -30,5 +30,17 @@
 		}
 	}
 	
+<<<<<<< HEAD
+	function query_special()
+	{
+		$myData = mysql_query("SELECT * FROM special");
+		while($record = mysql_fetch_array($myData))
+		{
+			echo '<option value="'.$record['name'].'">'.$record['name'].'</option>';
+		}
+	}
+	
+=======
+>>>>>>> origin/master
 ?>
 		

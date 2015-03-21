@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN”
+ “http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
+<html xmlns=”http://www.w3.org/1999/xhtml” lang=”en” xml:lang=”en”>
+	<head>
+		<title>Course Creation Form</title>
+		<meta http-equiv=”Content-Type” content=”text/html; charset=ISO-8859-1” />
+		<link rel="stylesheet" type="text/css" href="course.css"/>
+		<script language="javascript" type="text/javascript">
+			var alphabet = /[a-zA-Z]/;
+			var numericExpression = /^[0-9]+$/;
+			
+			function FormValidation(thisForm){
+				var allValid;
+				allValid =(checkCode(thisForm) && checkTitle(thisForm) && checkDiscipline(thisForm) 
+					&& checkLevel(thisForm) && checkCredits(thisForm) && checkSOffered(thisForm));
+				return allValid;
+			}
+			function checkCode(thisForm){
+				if(thisForm.CCode.value == '' ){
+					thisForm.CCode.style.backgroundColor='Red';
+					alert("You did not enter a course code.");
+					return false;}
+				if((thisForm.CCode.value.length!=4) || (!(thisForm.CCode.value.match(numericExpression)))){
+					thisForm.CCode.style.backgroundColor='Red';
+					alert("The course code should be four numbers.");
+					return false;}
+				return true;}
+			function checkTitle(thisForm){	
+				if(thisForm.CTitle.value==''){
+					thisForm.CTitle.style.backgroundColor='Red';
+					alert("You did not enter a course title.");
+					return false;}
+				else{return true;}}
+			function checkDiscipline(thisForm){
+				if(thisForm.CDiscipline.value==''){
+					thisForm.CDiscipline.style.backgroundColor='Red';
+					alert("You did not enter a course discipline.");
+					return false;
+				}else if ((thisForm.CDiscipline.value.length!=4) || (!(thisForm.CDiscipline.value.match(alphabet)))){
+					thisForm.CDiscipline.style.backgroundColor='Red';
+					alert("The course discipline should be four letters.");
+					return false;}
+				else{return true;}}
+			function checkLevel(thisForm){	
+				if(thisForm.Level.value==''){
+					thisForm.Level.style.backgroundColor='Red';
+					alert("You did not enter a course level.");
+					return false;}
+				else{return true;}}
+			function checkCredits(thisForm){	
+				if(thisForm.Credits.value==''){
+					thisForm.Credits.style.backgroundColor='Red';
+					alert("You did not enter the number of credits.");
+					return false;
+				}else if((thisForm.Credits.value < 1) || (thisForm.Credits.value > 8)){
+					thisForm.Credits.style.backgroundColor='Red';
+					alert("The credits must be a number from 1-8.");
+					return false;}
+				else{return true;}}
+			function checkSOffered(thisForm){	
+				if(thisForm.SOffered.value==''){
+					thisForm.SOffered.style.backgroundColor='Red';
+					alert("You did not enter the semester the course is offered.");
+					return false;
+				}else if ((thisForm.SOffered.value < 1) || (thisForm.SOffered.value > 2) || (!(field.value.match(numericExpression)))){
+					thisForm.SOffered.style.backgroundColor='Red';
+					alert("The semester offered must be a number between 1-2.");
+					return false;
+				}else{return true;}}
+		</script>
+	</head>
+
+	<body>
+	<h1> COURSE CREATION FORM</h1>
+
+	<form method="post" onsubmit="return FormValidation(this);" action ="insert.php">
+		<table summary = "Course Creation Form">
+			<tr>
+				<td>Course Code:</td>
+				<td><input type="text" name="CCode" id="CCode"/></td></tr>
+			<tr>
+				<td>Course Title:</td>
+				<td><input type="text" name="CTitle" id="CTitle"/></td></tr>
+			<tr>
+				<td>Course Discipline:</td>
+				<td><input type="text" name="CDiscipline" id="CDiscipline"/></td></tr>
+			<tr>
+				<td>Level:</td>
+				<td><input type="text" name="Level" id="Level"/></td></tr>
+			<tr>
+				<td>Credits:</td>
+				<td><input type="text" name="Credits" id="Credits"/></td></tr>
+			<tr>
+				<td>Semester Offered:</td>
+				<td><input type="text" name="SOffered" id="SOffered"/></td></tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td><input type="submit" name="Submit" id="Submit" value="SUBMIT" /></td>
+				<td>&nbsp;</td></tr>
+		</table>
+	</form>
+	</body>
+</html>
