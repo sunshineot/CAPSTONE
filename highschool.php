@@ -1,3 +1,8 @@
+<?php
+	session_start();
+	
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -36,7 +41,7 @@
           </li>  
         <li class="dropdown">
           <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#">
-            <i class="glyphicon glyphicon-user"></i> Student <span class="caret"></span></a>
+            <i class="glyphicon glyphicon-user"></i><?php echo $_SESSION["fname"];?>  <?php echo $_SESSION["lname"];?><span class="caret"></span></a>
           <ul id="g-account-menu" class="dropdown-menu" role="menu">
             <li><a href="#">My Profile</a></li>
             <li><a href="#"><i class="glyphicon glyphicon-lock"></i> Logout</a></li>
@@ -59,7 +64,7 @@
       <hr>
       
       <ul class="nav nav-stacked">
-        <li><a href="highschool.html"><i class="glyphicon glyphicon-flash"></i> Before You Plan</a></li>
+        <li><a href="highschool.php"><i class="glyphicon glyphicon-flash"></i> Before You Plan</a></li>
         <li><a href="majors.html"><i class="glyphicon glyphicon-flash"></i> Choose Your Major/Minor</a></li>
         <li><a href="degree.html"><i class="glyphicon glyphicon-link"></i> Year 1</a></li>
         <li><a href="degree.html"><i class="glyphicon glyphicon-list-alt"></i> Year 2</a></li>
