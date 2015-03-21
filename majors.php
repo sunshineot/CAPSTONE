@@ -16,6 +16,7 @@
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<link href="css/styles.css" rel="stylesheet">
+<<<<<<< HEAD
 		<script type="text/javascript">
 		function validate_form(thisForm){
 			//we need to include a function that checks that all the if's are true.
@@ -38,6 +39,8 @@
 		}
 
 		</script>
+=======
+>>>>>>> origin/master
 	</head>
 	<body>
 <!-- Header -->
@@ -112,7 +115,11 @@
         </div>
         <div class="panel-body">
       
+<<<<<<< HEAD
 		<form class="form form-vertical" method="post" onsubmit="return validate_form(this)" action="degree.php">
+=======
+		<form class="form form-vertical" method="post" action="degree.php">
+>>>>>>> origin/master
 			<div class="control-group">
 				<label>1st Major:</label>
 				<div class="controls">
@@ -134,6 +141,7 @@
 			</div>
 			
 			<div class="control-group">
+<<<<<<< HEAD
 				<label>Programs/Special:</label>
 				<div class="controls">
 					<select class="form-control" name="special" required autofocus>
@@ -144,6 +152,8 @@
 			</div>
 			
 			<div class="control-group">
+=======
+>>>>>>> origin/master
 				<label>1st Minor:</label>
 				<div class="controls">
 					<select class="form-control" name="minor1">

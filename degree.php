@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 		//include_once 'function.php';
 		session_start();
 		$Major1 = $_POST["major1"];
@@ -30,6 +31,22 @@
      $result = mysqli_query($connection, $query);
 
     if($result)
+=======
+		include_once 'function.php';
+
+		$Major1 = $_POST["major1"];
+		$Major2 = $_POST["major2"];
+		$Minor1 = $_POST["minor1"];
+		$Minor2 = $_POST["major2"];
+		$Level = $_POST["level"];
+		$Status = $_POST["status"];
+		//need query to find the id of a student
+		
+		$query = "INSERT into student values('$Major1','$Major2', '$Minor1', '$Minor2', '$Level', '$Status')";
+	
+
+		if($query)
+>>>>>>> origin/master
 		{
 			include 'degree.html';
 		}

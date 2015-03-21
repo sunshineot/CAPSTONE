@@ -30,6 +30,7 @@
 		}
 	}
 	
+<<<<<<< HEAD
 	function query_special()
 	{
 		$myData = mysql_query("SELECT * FROM special");
@@ -39,5 +40,7 @@
 		}
 	}
 	
+=======
+>>>>>>> origin/master
 ?>
 		
