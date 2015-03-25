@@ -60,7 +60,7 @@ session_start();
 		          <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="">
 		            <i class="glyphicon glyphicon-user"></i> Login <span class="caret"></span></a>
 		          <ul id="g-account-menu" class="dropdown-menu" role="menu">
-		            <form class="navbar-form navbar-left" method="post" action="dashboard.html">
+		            <form class="navbar-form navbar-left" method="post" action="_starter_login.php">
                               <div class="form-group">
                                 <input type="text" class="form-control" name ="username" placeholder="Username">
                                 <input type="password" class="form-control" name="password" placeholder="Password">

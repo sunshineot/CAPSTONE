@@ -17,9 +17,9 @@ $PASS = $_POST["password"];
 
 
     //Connect to the database
-    $host = 'localhost';   //host name
+    $host = '173.194.252.98';   //host name
     $user = 'root';                     //username
-    $pass = '';                                 //password
+    $pass = 'capstone';                                 //password
     $db = 'capstone';                          //Your database name you want to connect to
     //$port = 3306;                               //The port #. <usually 3306>
 
@@ -43,7 +43,7 @@ $PASS = $_POST["password"];
         $_SESSION["stid"] = $row['stid'];
         $_SESSION["fname"] = $row['fname'];
 		 $_SESSION["lname"] = $row['lname'];
-		include 'majors.php';
+		include 'dashboard.php';
 		}
 	}
 	

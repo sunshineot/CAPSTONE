@@ -30,7 +30,7 @@
 		}
 	}
 	
-<<<<<<< HEAD
+
 	function query_special()
 	{
 		$myData = mysql_query("SELECT * FROM special");
@@ -39,8 +39,6 @@
 			echo '<option value="'.$record['name'].'">'.$record['name'].'</option>';
 		}
 	}
-	
-=======
->>>>>>> origin/master
+
 ?>
 		
