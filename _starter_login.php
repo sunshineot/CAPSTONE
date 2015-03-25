@@ -17,9 +17,9 @@ $PASS = $_POST["password"];
 
 
     //Connect to the database
-    $host = '173.194.252.98';   //host name
+    $host = 'localhost';   //host name
     $user = 'root';                     //username
-    $pass = 'capstone';                                 //password
+    $pass = 'root';                                 //password
     $db = 'capstone';                          //Your database name you want to connect to
     //$port = 3306;                               //The port #. <usually 3306>
 

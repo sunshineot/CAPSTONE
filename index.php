@@ -86,7 +86,7 @@ session_start();
                     ?>
                   <!--  <li class="active"><a href="./Cover Template for Bootstrap_files/Cover Template for Bootstrap.html">Log In</a></li> -->
                   <li><a href="about.html">About</a></li>
-                  <li><a href="faq.html">FAQ's</a></li>
+                  <li><a href="faqs.html">FAQ's</a></li>
                 </ul>
               </nav>
             </div>
@@ -96,17 +96,9 @@ session_start();
             <h1 class="cover-heading">UWI MONA Student Course Adviser</h1>
             <p class="lead">We plan your degree so you don't have to!</p>
             <p class="lead">
-                <?php
-                if (!isset($_SESSION['id'])){
-                    ?>
-              <a href="signup.html" class="btn btn-lg btn-default">Sign up</a>
-                    <?php
-                } else {
-                    ?>
-              <a href="dashboard.php" class="btn btn-lg btn-default">Go to Dashboard</a>
-                    <?php
-                }
-                    ?>
+                
+              <a href="signup.php" class="btn btn-lg btn-default">Sign up</a>
+                
             </p>
           </div>
 
@@ -130,4 +122,5 @@ session_start();
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     
 
-</body></html>
+</body>
+</html>

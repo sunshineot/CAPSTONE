@@ -16,7 +16,7 @@
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<link href="css/styles.css" rel="stylesheet">
-		<script src="js/majors.js"></script>
+		<script src="majors.js"></script>
 	</head>
 	<body>
 <!-- Header -->
@@ -91,7 +91,7 @@
         </div>
         <div class="panel-body">
       
-		<form class="form form-vertical" method="post" onsubmit="return validate_form(this)" action="degree.php">
+		<form class="form form-vertical" method="post" onsubmit="return FormValidation()" action="degree.php">
 			<div class="control-group" id="specialgroup">
 				<label>Programs/Special:</label>
 				<div class="controls">
@@ -122,10 +122,10 @@
 				</div>
 			</div>
 			
-			<div class="control-group" id="minor1group" style="display: none;" onchange="minor1SelectHandler()">
+			<div class="control-group" id="minor1group" style="display: none;">
 				<label>1st Minor:</label>
 				<div class="controls">
-					<select class="form-control" name="minor1" id="minor1" style="display: none;">
+					<select class="form-control" name="minor1" id="minor1" onchange="minor1SelectHandler()">
 						<option selected>--Select Minor--</option>
 						<?php query_minors()?>
 					</select></br>
@@ -135,7 +135,7 @@
 			<div class="control-group" id="minor2group" style="display: none;">
 				<label>2nd Minor:</label>
 				<div class="controls">
-					<select class="form-control" name="minor2">
+					<select class="form-control" name="minor2" id="minor1">
 					<option selected>--Select Minor--</option>
 						<?php query_minors()?>
 					</select></br>
@@ -172,8 +172,9 @@
                 <button type="submit" class="btn btn-primary">Plan My Degree</button>
               </div>
             </div>
+
+
 		</form>
-         
             <!--center-right-->
         	
      
@@ -198,5 +199,6 @@
 	<!-- script references -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		
 	</body>
 </html>
