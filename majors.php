@@ -2,7 +2,7 @@
 	include_once 'function.php';
 	connect();
 ?>
-	
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -16,31 +16,7 @@
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<link href="css/styles.css" rel="stylesheet">
-<<<<<<< HEAD
-		<script type="text/javascript">
-		function validate_form(thisForm){
-			//we need to include a function that checks that all the if's are true.
-			if (thisForm["major1"].value== "--Select Major--" && thisForm["major2"].value != "--Select Major--"){
-				alert("Major 1 must be selected before you can select Major 2");
-				return false;
-			}
-			if (thisForm["minor1"].value== "--Select Minor--" && thisForm["minor2"].value != "--Select Minor--"){
-				alert("Minor 1 must be selected before you can select Minor 2");
-				return false;
-			}
-			if ((thisForm["major1"].value != "--Submit Major--")&&(thisForm["major2"].value != "--Submit Major--") && (thisForm["major1"].value == thisForm["major2"].value)){
-				alert("You cannot do the two same Majors");
-				return false;
-			}
-			// if(thisForm["special"].value != '--Select Special--' ) &&(((thisForm["major1"].value != '--Select Major--' ) or (thisForm["major2"].value != '--Select Major--' ))){
-				 // alert("You cannot do a Major and a Special");
-				 // return false;
-			//}
-		}
-
-		</script>
-=======
->>>>>>> origin/master
+		<script src="majors.js"></script>
 	</head>
 	<body>
 <!-- Header -->
@@ -115,58 +91,51 @@
         </div>
         <div class="panel-body">
       
-<<<<<<< HEAD
-		<form class="form form-vertical" method="post" onsubmit="return validate_form(this)" action="degree.php">
-=======
-		<form class="form form-vertical" method="post" action="degree.php">
->>>>>>> origin/master
-			<div class="control-group">
-				<label>1st Major:</label>
+		<form class="form form-vertical" method="post" onsubmit="return FormValidation()" action="degree.php">
+			<div class="control-group" id="specialgroup">
+				<label>Programs/Special:</label>
 				<div class="controls">
-					<select class="form-control" name="major1" required autofocus>
-					<option selected>--Select Major--</option>
-						<?php query_majors()?>
+					<select class="form-control" name="special" id="special" onchange="return specialSelectHandler()" required autofocus>
+						<option selected>--Select Special--</option>
+						<?php query_special()?>
 					</select></br>
 				</div>
 			</div>
 			
-			<div class="control-group">
-				<label>2nd Major:</label>
+			<div class="control-group" id="major1group">
+				<label>1st Major:</label>
 				<div class="controls">
-					<select class="form-control" name="major2">
+					<select class="form-control" name="major1" id="major1" onchange="return major1SelectHandler()" required autofocus>
 						<option selected>--Select Major--</option>
 						<?php query_majors()?>
 					</select></br>
 				</div>
 			</div>
 			
-			<div class="control-group">
-<<<<<<< HEAD
-				<label>Programs/Special:</label>
+			<div class="control-group" id="major2group" style="display: none;">
+				<label>2nd Major:</label>
 				<div class="controls">
-					<select class="form-control" name="special" required autofocus>
-					<option selected>--Select Special--</option>
-						<?php query_special()?>
+					<select class="form-control" name="major2" id="major2" onchange="major2SelectHandler()">
+						<option selected>--Select Major--</option>
+						<?php query_majors()?>
 					</select></br>
 				</div>
 			</div>
 			
-			<div class="control-group">
-=======
->>>>>>> origin/master
+			<div class="control-group" id="minor1group" style="display: none;">
 				<label>1st Minor:</label>
 				<div class="controls">
-					<select class="form-control" name="minor1">
-					<option selected>--Select Minor--</option>
+					<select class="form-control" name="minor1" id="minor1" onchange="minor1SelectHandler()">
+						<option selected>--Select Minor--</option>
 						<?php query_minors()?>
 					</select></br>
 				</div>
 			</div>
 			
-			<div class="control-group">
+			<div class="control-group" id="minor2group" style="display: none;">
 				<label>2nd Minor:</label>
 				<div class="controls">
-					<select class="form-control" name="minor2">
+					<select class="form-control" name="minor2" id="minor1">
 					<option selected>--Select Minor--</option>
 						<?php query_minors()?>
 					</select></br>
@@ -203,8 +172,9 @@
                 <button type="submit" class="btn btn-primary">Plan My Degree</button>
               </div>
             </div>
+
+
 		</form>
-         
             <!--center-right-->
         	
      
@@ -229,5 +199,6 @@
 	<!-- script references -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+		
 	</body>
 </html>

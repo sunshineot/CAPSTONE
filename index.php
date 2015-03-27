@@ -1,3 +1,14 @@
+<?php
+session_start();
+// FOLLOWING COMMENTED CODE WAS USED FOR TESTING
+// PAGE DIFFERENCES WITH SET AND UNSET SESSION.
+// WILL BE REMOVED WHEN SESSION MGMT FULLY IMPLEMENTED.
+// $_SESSION['id']=1;
+// $_SESSION['fname']="Alex"
+// session_unset();
+// session_destroy();
+// if (!isset($_SESSION['id'])){
+    ?>
 <!DOCTYPE html>
 <!-- saved from url=(0040)http://getbootstrap.com/examples/cover/# -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -42,6 +53,9 @@
               <h3 class="masthead-brand">Student Course Adviser</h3>
               <nav>
                 <ul class="nav masthead-nav">
+                    <?php
+                    if (!isset($_SESSION['id'])){
+                    ?>
                   <li class="dropdown">
 		          <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="">
 		            <i class="glyphicon glyphicon-user"></i> Login <span class="caret"></span></a>
@@ -56,9 +70,23 @@
 
 		          </ul>
 		        </li>
+		            <?php
+                    }else{
+                    ?>
+                    <li class="dropdown">
+		          <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="">
+		            <i class="glyphicon glyphicon-user"></i> <?php echo $_SESSION['fname']; ?> <span class="caret"></span></a>
+		          <ul id="g-account-menu" class="dropdown-menu" role="menu">
+		            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Settings</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Logout</a></li>
+		          </ul>
+		        </li>
+                    <?php
+                    }
+                    ?>
                   <!--  <li class="active"><a href="./Cover Template for Bootstrap_files/Cover Template for Bootstrap.html">Log In</a></li> -->
                   <li><a href="about.html">About</a></li>
-                  <li><a href="faq.html">FAQ's</a></li>
+                  <li><a href="faqs.html">FAQ's</a></li>
                 </ul>
               </nav>
             </div>
@@ -68,7 +96,9 @@
             <h1 class="cover-heading">UWI MONA Student Course Adviser</h1>
             <p class="lead">We plan your degree so you don't have to!</p>
             <p class="lead">
-              <a href="signup.html" class="btn btn-lg btn-default">Sign up</a>
+                
+              <a href="signup.php" class="btn btn-lg btn-default">Sign up</a>
+                
             </p>
           </div>
 
@@ -92,4 +122,5 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
     
 
-</body></html>
+</body>
+</html>
